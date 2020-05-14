@@ -1,0 +1,98 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Primary use:    sidenav.css file used for styling side navigationbar
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Layout]
+
+* body
+    + Content / .content-wrapper
+        - Buffer Space/ .buffer
+        - Side Navigation bar / #navigation-bar
+        - Main Content/ .main-content
+-------------------------------------------------------------------*/
+
+.navigation-item {
+    border-bottom: 2px solid #909090;
+    color: #000000;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 10px 0px 10px 0px;
+}
+
+.navigation-item:hover {
+    background-color:#46166b;
+    color: white;
+    padding-left: 10px;
+}
+
+.navigation-item > a ,.navigation-sub-item > a{
+    color: #000000;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+.navigation-item:hover > a {
+    background-color: #46166b ;
+    color: white;
+    text-decoration: underline;
+  }
+
+.active-page {
+    background-color: #46166b ;
+    padding-left: 10px;
+}
+
+.active-page>a {
+    color: white;
+}
+
+.navigation-sub-item {
+    border-bottom: 2px solid #909090;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 10px 10px 10px 20px;
+}
+
+.navigation-sub-item:hover {
+    background-color: #46166b;
+    color: white;
+    padding-left: 20px;
+}
+
+.navigation-sub-item:hover > a {
+    background-color: #46166b;
+    color: white;
+    text-decoration: underline;
+  }
+
+.navigation-sub-item-default {
+    border-bottom: 2px solid #909090;
+    background-color: #46166b;
+    color: white;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 10px 0px 10px 20px;
+}
+
+.navigation-sub-item-default > a{
+    background-color: #46166b;
+    color: white;
+}
+
+.navigation-sub-item-default:hover > a {
+    background-color: #46166b;
+    color: white;
+    text-decoration: underline;
+  }
+ 
+

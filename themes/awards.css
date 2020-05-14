@@ -1,0 +1,111 @@
+.awardinfo{
+    position: relative;
+    border-bottom: 1px solid black;
+    margin: 0 0 20px 50px;
+}
+
+.award-logo{
+    width: 130px;
+    height: auto;
+}
+
+.awardname{
+    padding: 0 0 0 0;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.awarddescription{
+    padding: 0 0 0 0;
+}
+
+.awardeligibility{
+    padding: 0 0 0 0;
+}
+
+.left{
+    margin: 0 0 5px 0;
+    float: left;
+    width: 50%;
+}
+
+.right{
+    margin: 0 0 5px 0;
+    float: right;
+    width: 50%;
+}
+
+.num-list{
+    list-style: decimal;
+    padding: 0 0 0 50px;
+}
+
+.num-list>li{
+    padding: 0px 0 0 10px
+}
+
+.tile{
+    background-color: #46166b;
+    height: 200px;
+    float: left;
+    width: 40%;
+    min-width: 300px;
+    margin: 0 2% 2% 0;
+    text-align: center;
+    text-shadow: 3px 1px 2px black;
+}
+
+.tile >a{
+    color: white;
+    display: block;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    text-transform: capitalize;
+    line-height: 35px;
+    text-shadow: 3px 1px 2px black;
+}
+
+.degree-level-img{
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+.tile-logo{
+    height: 100px;
+    margin-bottom: 15px;
+    transition: all .15s ease-in-out;
+}
+
+.major-award-info{
+    width: 30%;
+    margin: 0 0 30px 10%;
+}
+
+.major-award-info > .card{
+    vertical-align: middle;
+}
+
+.major-award-info > ul{
+    list-style-position: inside;
+}
+
+.major-award-info > p{
+   padding-left: 0px;
+}.tile-logo-container{
+    width: 100%;
+    text-align: center;
+}
+
+.tile-logo-container:hover{
+    cursor: pointer;
+}
+
+.tile-logo-container:hover > .tile-logo{
+    transform: scale(1.15);
+}
+
+.tile-logo-container:hover > p{
+    text-decoration: underline;
+}

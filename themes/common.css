@@ -1,0 +1,572 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Primary use:    Common.css file used for styling header, footer and
+                common components across the student funding webpage
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Layout]
+
+* body
+    + Header / #navbar-header
+    + Landing-Page-Wrapper / .landing-page-image-wrapper
+        -Landing-Page-Image / .landing-page-image
+    + Content / .content-wrapper
+        - Buffer Space/ .buffer
+        - Side Navigation bar / #navigation-bar
+        - Main Content/ .main-content
+    + Footer / #footer
+        - Address/ address
+        - Footer Navigation/ .footer-navigation
+        - CopyRight Content/ #copyright-content
+-------------------------------------------------------------------*/
+/* Adding custom fonts: TradeGothicLTStd-BdCn20, News Cycle, Public Sans*/
+
+@font-face {
+    font-family: 'TradeGothicLTStd-BdCn20';
+    src: url('../assets/fonts/TradeGothicLTStd-BdCn20.ttf');
+}
+
+@font-face {
+    font-family: 'News Cycle';
+    src: url('../assets/fonts/news-cycle.regular.ttf');
+}
+
+@font-face {
+    font-family: 'PublicSans';
+    src: url('../assets/fonts/public-sans.regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+#navigation-bar {
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+#navbar-header {
+    background-color: #46166b;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+a{
+    color: #000000;
+}
+
+a:hover{
+    color: #000000;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.page-banner-image-wrapper {
+    position: relative;
+    width: 100%;
+    top: 90px;
+}
+
+.landing-page-image {
+    width: 100%;
+}
+
+.ualbany-logo-wrapper {
+    height: 90px;
+    width: 100%;
+}
+
+.ualbany-logo {
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.home-banner-left-block{
+    position: absolute;
+    bottom: 7%;
+    left:2%;
+    color:  #edba32;;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.home-banner-text-block {
+    box-sizing: content-box;
+    position: absolute;
+    bottom: 1%;
+    left:1%;
+    text-shadow: 3px 1px 2px black;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    padding: 10px;
+    width: 70%;
+  }
+
+  .home-banner-text-block > h1 {
+    color: white;
+  }
+
+  .home-banner-text-block > p {
+    color:  #edba32;
+  }
+
+  .home-banner-image-block {
+    float: right;
+    width: 55%;
+    height: 100%;
+  }
+
+  .home-banner-image-block > img{
+    float: right;
+    padding: 0px,0px,0px,0px;
+    width: inherit;
+    height: inherit;
+  }
+
+.buffer {
+    height: 100px;
+    width: 100%;
+}
+
+.content-wrapper {
+    background: url('../assets/images/bkg-gray-pattern-tile.png');
+    position: relative;
+    top: 90px;
+}
+
+.content-header {
+    color: #000000;
+    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    color: #333333;
+    font-size: 20px;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    line-height: 26px;
+    padding-bottom: 30px;
+}
+
+#copyright-content {
+    text-transform: uppercase;
+    color: #9d9d9d;
+    border-top: 1px solid #464646;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: block;
+    margin-left: 360px;
+    font-size: 12px;
+    font-family: 'PublicSans', sans-serif;
+}
+
+#copyright-content>p {
+    padding: 0px;
+}
+
+.display-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#footer {
+    background: #333333 url('../assets/images/mapimg_left.jpg') no-repeat left top;
+    position: relative;
+    top: 90px;
+    padding: 20px;
+    min-height: 360px;
+}
+
+#footer-content {
+    margin-left: 360px;
+    margin-top: 40px;
+    display: flex;
+}
+
+.footer-logo-wrapper {
+    height: 39px;
+    width: 100%;
+}
+
+.footer-logo {
+    max-width: 100%;
+}
+
+.footer-navigation-header {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 24px;
+    padding: 0px;
+    font-family: 'PublicSans', sans-serif;
+}
+
+.footer-navigation {
+    list-style-type: none;
+    font-family: 'PublicSans', sans-serif;
+}
+
+.footer-navigation>li {
+    padding-bottom: 7px;
+}
+
+.footer-navigation>li>a {
+    color: #DDDDDD;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+address, address>a {
+    color: #e4e4e4;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+address>a:hover {
+    color: #e4e4e4;
+    text-decoration: underline;
+}
+
+  /* The dropdown container */
+.dropdown {
+    overflow: visible;
+  }
+
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+
+  /* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.major-award-image-col{
+    background-color: #ffffff;
+    border-width:2px;
+    border-color:#000000;
+}
+
+.images-table{
+    border-collapse: separate;
+    border-color:#000000;
+}
+
+.dot-list{
+    list-style: disc;
+    padding: 0 0 0 50px;
+    list-style-position: inside;
+}
+
+.check-list{
+    list-style:none;
+    padding: 0 0 0 50px;
+    list-style-position: inside;
+}
+
+.check-list>li{
+    padding: 10px 0 0 20px
+}
+
+.check-list>li:before {
+    content: "✓  ";
+    font-weight: bold;
+    color: #000000;
+}
+
+.margin-bottom{
+    margin-bottom: 10px;
+}
+
+.char-list{
+    list-style: lower-alpha;
+    padding: 0 0 0 20px;
+}
+
+.num-list{
+    list-style: decimal;
+    padding: 0 0 0 90px;
+}
+
+.num-list>li{
+    padding: 0px 0 0 20px
+}
+
+
+
+.justify-text{
+    text-align: justify;
+}
+
+.spanpurple{
+    color:#46166b;
+}
+
+.spanblackbold{/**Change class name*/
+    color:#000000;
+    font-weight: bold;
+}
+
+.spanunderline{
+    text-decoration: underline;
+}
+
+.spanbold{
+    font-weight: bold;
+}
+
+.defaultlink{
+    color: #0000EE;
+}
+
+.notice{
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.card{
+    width: 75%;
+    margin: 0 20px 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border: none;
+}
+
+.card>a>img{
+    width: 100%;
+    padding: 20px;
+}
+
+.researchadmins{
+    width: 100%;
+}
+
+.admin-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.admin-info{
+    text-align: center;
+    padding: 20px;
+}
+
+.title{
+    color: black;
+}
+
+.email{
+   font-style: italic;
+}
+
+.email::before{
+    content: "Email: ";
+    font-style:normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-content> #search-box{
+    background-color: #F9F9F9;
+    height: 40px;
+    border: 1px solid #B9B9B9;
+    border-radius: 1%;
+    font-size: 20px;
+    padding: 5px 0px 10px 2px;
+}
+
+.main-content>#search-box-results{
+    display: block;
+}
+
+#search-button{
+    height: 40px;
+    width: 40px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    top: 3px;
+    left: -1px;
+}
+
+.departments{
+    display: none;
+}
+
+table, tr, th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .home-banner-left-block
+    {   
+        top: 27%;
+        width: 55%;
+    }
+    .home-banner-text-block>h1
+    {
+        font-size: 6vw;
+    }
+    .home-banner-text-block>p
+    {
+        display: none;
+    }
+
+    .main-content {
+        padding-top: 20px;
+    }
+    .main-content> #search-box{       
+        margin-bottom: 5px;
+        width: 80%;
+    }   
+    .main-content>#search-box-results{
+        margin-bottom: 30px;
+    }
+
+    .home-banner-left-block{
+        transform: scale(0.5);
+        bottom: 0.1%;
+        left: 0.1%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #navigation-bar {
+        margin-left: 50px;
+    }
+
+    .home-banner-left-block{
+        bottom: 7%;
+        left: 2%;
+        width: 61%;
+    }
+    .home-banner-text-block>h1
+    {
+        font-size: 4.6vw;
+        padding-left: 10px;
+    }
+    .home-banner-text-block>p
+    {
+       display: none;
+       padding-left: 10px;
+    }
+
+    .main-content>h1, .main-content>h2, .main-content>h3, 
+    .main-content>h4, .main-content>h5, .main-content>h6, .main-content>
+    p, .row {
+        padding-left: 50px;
+    }
+    .main-content>.row{
+        margin: 0px 0px 0px 0px;
+    }
+    .main-content> #search-box{       
+        margin: 0px 0px 5px 50px;
+        width: 255px;
+    }
+    .main-content>#search-box-results{
+        margin: 0px 0px 20px 50px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .home-banner-left-block{
+        bottom: 7%;
+        left: 2%;
+        width: 61%;
+    }
+
+    .home-banner-text-block>h1
+    {
+        font-size: 3.75vw;
+    }
+
+    .home-banner-text-block>p
+    {
+       display: block;
+       font-size: 1.9vw;
+    }
+
+    #navigation-bar {
+        margin-left: 75px;
+    }
+    .main-content> #search-box{       
+        width: 510px;
+    }
+    .home-banner-left-block{
+        transform: scale(0.9);
+        bottom: 2%;
+        left: 0.1%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #navigation-bar {
+        margin-left: 100px;
+    }
+
+    .home-banner-left-block{
+        bottom: 7%;
+        left: 2%;
+        width: 60%;
+    }
+    .home-banner-text-block>h1
+    {
+        font-size: 3.2vw;
+    }
+    .home-banner-text-block>p
+    {
+        font-size: 1.75vw;
+    }
+}
+
+@media only screen and (max-width: 985px) {
+    #footer {
+        background: #333333 url('../assets/images/mapimg.jpg') no-repeat center top;
+    }
+    #footer-content {
+        margin-top: 334px;
+        margin-left: 0px;
+    }
+    #copyright-content {
+        margin-left: 0px;
+    }
+}
+
+

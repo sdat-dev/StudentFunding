@@ -1,0 +1,108 @@
+.nav-pills .nav-link{
+    background-color: #46166C;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    width: 100%;
+    margin-right: 1rem;
+    
+}
+
+.nav-link > img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-pills .nav-link.active{
+    background-color: #edba32;
+    color:black;
+    border: 1px solid black;
+    text-shadow:none;
+}
+
+.nav-pills .nav-link:hover{
+    background-color:#edba32;
+    color: black;
+    text-shadow:none;
+}
+
+.nav-pills .nav-item{
+    min-width: 370px;
+    margin-right: 10px;
+}
+
+.nav-tabs .nav-link{
+    background-color: #46166C;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    margin-right: 5px;
+}
+
+.nav-tabs .nav-link.active{
+    background-color: #edba32;
+    color:black;
+    border: 1px solid black;
+    border-bottom: none;
+    text-shadow:none;
+
+}
+
+.nav-tabs .nav-link:hover{
+    background-color:#edba32;
+    color: black;
+    text-shadow:none;
+}
+
+.nav-tabs .nav-item{
+    width: 200px;
+}
+
+.sub-tab .tab-pane{
+    padding: 10px;
+}
+
+.dot-list{
+    padding: 0 0 0 20px;
+}
+
+.circle-list{
+    list-style: circle;
+    padding: 0 0 0 25px;
+    list-style-position: inside;
+}
+
+.none-list{
+    list-style-type: none;
+    padding: 0 0 0 25px;
+}
+
+.check-list{
+    padding-left: 0px;
+}
+
+.link{
+    color: #46166C;
+    text-decoration: underline;
+}
+
+.link:hover{
+    color: #46166C;
+    font-weight: bold;
+}
+
+.download-link{
+    color: #46166C;
+    text-decoration: underline;
+}
+
+.download-link:hover{
+    color: #edba32;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-content > .accordion {
+        margin-left: 50px;
+    }
+}

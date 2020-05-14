@@ -1,0 +1,79 @@
+.content{
+    padding-left: 50px;
+}
+
+.videos-container{
+    background-color: #ffffff;
+    border-color: #d4d4d4;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.videos-body{
+    padding-left: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.videos-header{
+    position: relative;
+    color: white;
+    display: block;
+    background: #45166a;
+    box-sizing: content-box;
+    height: 70px;
+}
+
+.agency-title{
+    position: relative;
+    float: left;
+    display: block;
+}
+
+.agency-title > h4{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 0 0 10px;
+}
+
+.video-title{
+    font-weight: bold;
+    padding-top: 10px;
+    display: block;
+    width: 90%;
+}
+
+.agency-logo {
+    position: relative;
+    float: left;
+    display: block;
+    padding: 10px;
+}
+
+.agency-logo > img{
+    height: 50px;
+    width: auto;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+.videoWrapper iframe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+   /* box-shadow: 2px 2px 12px black;*/
+    float: left;
+    border: 2px solid gray;
+}
+
+.video-padding-margin{
+    padding: 0px;
+    margin-bottom: 15px;
+}

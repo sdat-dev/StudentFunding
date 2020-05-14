@@ -1,0 +1,46 @@
+#content-awardees{
+    padding-left: 50px;
+}
+.awardee-info{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #C0C0C0;
+}
+
+.awardee-photo{
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    margin: 10px;
+    margin-left: 0px;
+    box-shadow: 2px 2px 12px black;
+}
+
+.name{
+    font-weight: bold;
+}
+
+.award-details{
+    padding-bottom: 10px;
+}
+
+.link{
+    color: #007bff;
+}
+
+.email{
+    color: #007bff;
+    font-style: italic;
+}
+
+.email:before{
+    content:"";
+}
+
+.content-line{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.testimony{
+    font-style: italic; 
+}

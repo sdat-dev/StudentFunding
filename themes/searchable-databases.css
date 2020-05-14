@@ -1,0 +1,43 @@
+.databases-layout{
+    padding-left: 35px;
+}
+
+.vertical-left-half{
+    float: left;
+    width: 50%;
+}
+
+.vertical-left-half > h2{
+    padding-left: 15px;
+}
+
+.vertical-right-half{
+    width: 50%;
+}
+
+.vertical-right-half > h2{
+    padding-left: 15px;
+}
+
+.database_box{
+    margin-top: 30px;
+ }
+
+.logoimg{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    box-shadow: 2px 2px 12px black;
+}
+
+.logoimg:hover{
+    border: #8d6507 solid 1px;
+    box-shadow: 2px 2px 2px #8d6507;
+}
+
+@media only screen and (min-width: 985px) {
+    .vertical-right-half{
+        float: right;
+    }
+}
+
