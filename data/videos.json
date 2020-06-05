@@ -37,8 +37,14 @@
             "logo":"nih.png"
         },
         {
-            "Title": "GRFP 2020 Application Tutorial from NSF GRFP on Vimeo",
+            "Title":"GRFP 2020 Application Tutorial from NSF GRFP on Vimeo",
             "Link": "https://player.vimeo.com/video/361416494",
+            "Agency":"National Science Foundation (NSF)",
+            "logo":"nsf.png"
+        },
+        {
+            "Title":"NSF Graduate Research Fellowship Program Info Session, August 2016",
+            "Link": "https://www.youtube.com/embed/r_BDHz0rPII",
             "Agency":"National Science Foundation (NSF)",
             "logo":"nsf.png"
         }
