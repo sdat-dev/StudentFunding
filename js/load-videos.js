@@ -40,7 +40,7 @@ request.onload = function () {
             agencycontent = agencycontent +
             '<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 video-padding-margin">'+
             '   <div class="videoWrapper">' + 
-            '       <iframe src="' + video.Link + '"></iframe>' +
+            '       <iframe src="' + video.Link + '" allowfullscreen="true"></iframe>' +
             '   </div>' +
             '   <h5 class="video-title">' + video.Title + '</h5>'+
             '</div>';
