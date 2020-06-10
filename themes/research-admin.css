@@ -1,0 +1,71 @@
+.researchadmins{
+    width: 100%;
+}
+
+.admin-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.admin-info{
+    text-align: center;
+    padding: 20px;
+}
+
+.title{
+    color: black;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.email{
+   font-style: italic;
+}
+
+.email::before{
+    content: "Email:";
+    font-style:normal;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-content> #search-box{
+    background-color: #F9F9F9;
+    height: 40px;
+    border: 1px solid #B9B9B9;
+    border-radius: 1%;
+    font-size: 20px;
+    padding: 5px 0px 10px 2px;
+}
+
+.main-content>#search-box-results{
+    display: block;
+}
+
+#search-button{
+    height: 40px;
+    width: 40px;
+    background-color: #000000;
+    color: white;
+    position: relative;
+    top: 3px;
+    left: -1px;
+}
+
+.departments{
+    display: none;
+}
+
+#rateams{
+    display: none;
+}
