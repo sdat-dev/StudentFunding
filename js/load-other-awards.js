@@ -7,7 +7,7 @@ let contentbody = document.getElementById('content-body');
 request.onload = function () {
     const awardsjson = request.response;  
     //condition for checking if browser is Internet Explorer
-    let awards =  ((false || !!document.documentMode))? JSON.parse(awardsjson).otherawards: awardsjson.otherawards;
+    let awards =  ((false || !!document.documentMode))? JSON.parse(awardsjson): awardsjson;
     
     let content = '';
 

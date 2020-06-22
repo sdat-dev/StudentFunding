@@ -5,9 +5,9 @@ request.responseType = 'json';
 request.send();
 let awardeescontent = document.getElementById('content-awardees');
 request.onload = function () {
-    const awardeesjson = request.response;  
+    const pastawardeesjson = request.response;  
     //condition for checking if browser is Internet Explorer
-    let pastawardees =  ((false || !!document.documentMode))? JSON.parse(awardeesjson).pastawardees: awardeesjson.pastawardees;
+    let pastawardees =  ((false || !!document.documentMode))? JSON.parse(pastawardeesjson): pastawardeesjson;
     
     let content = '';
 

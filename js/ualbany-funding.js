@@ -5,9 +5,9 @@ request.responseType = 'json';
 request.send();
 let awrdsContainer = document.getElementsByClassName('awards-container')[0];
 request.onload = function () {
-    const awardsjson = request.response;  
+    const ualbanyawardsjson = request.response;  
     //condition for checking if browser is Internet Explorer
-    let awards =  ((false || !!document.documentMode))? JSON.parse(awardsjson).ualbanyawards: awardsjson.ualbanyawards;
+    let awards =  ((false || !!document.documentMode))? JSON.parse(ualbanyawardsjson): ualbanyawardsjson;
     
     let content = '';
     //degree-counter for unique id generation
