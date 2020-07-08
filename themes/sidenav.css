@@ -15,13 +15,15 @@ Primary use:    sidenav.css file used for styling side navigationbar
 -------------------------------------------------------------------*/
 
 .navigation-item {
-    border-bottom: 2px solid #909090;
-    color: #000000;
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    border-bottom: 3px solid #e0e0e0;
+    color: #46166B;
     font-size: 20px;
     font-weight: 400;
     list-style-type: none;
     padding: 10px 0px 10px 0px;
+    font-family: 'PublicSans', sans-serif!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation-item:hover {
@@ -31,7 +33,7 @@ Primary use:    sidenav.css file used for styling side navigationbar
 }
 
 .navigation-item > a ,.navigation-sub-item > a{
-    color: #000000;
+    color: #46166B;
     display: block;
     width: 100%;
     height: auto;
@@ -53,12 +55,14 @@ Primary use:    sidenav.css file used for styling side navigationbar
 }
 
 .navigation-sub-item {
-    border-bottom: 2px solid #909090;
-    font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;
+    border-bottom: 2px solid #e0e0e0;
     font-size: 20px;
     font-weight: 400;
     list-style-type: none;
     padding: 10px 10px 10px 20px;
+    font-family: 'PublicSans', sans-serif!important;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .navigation-sub-item:hover {
@@ -74,7 +78,7 @@ Primary use:    sidenav.css file used for styling side navigationbar
   }
 
 .navigation-sub-item-default {
-    border-bottom: 2px solid #909090;
+    border-bottom: 2px solid #e0e0e0;
     background-color: #46166b;
     color: white;
     font-family: 'TradeGothicLTStd-BdCn20', Helvetica, Arial, sans-serif;

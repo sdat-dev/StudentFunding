@@ -30,3 +30,15 @@ Primary use:    index.css file used for styling home page
     color: #46166C;
     font-weight: bold;
 }
+
+.main-content {
+    color: #444;
+    font-size: 22px;
+    font-family: 'PublicSans', sans-serif!important;;
+    line-height: 26px;
+    padding-bottom: 30px;
+}
+
+.logos-content{
+    padding-left: 50px;
+}
