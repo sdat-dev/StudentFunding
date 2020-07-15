@@ -62,11 +62,12 @@ Primary use:    Common.css file used for styling header, footer and
 }
 
 #navbar-header {
-    background-color: #46166b;
+    background-color: #46166C;
     height: 90px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 2;
 }
 
 a {
