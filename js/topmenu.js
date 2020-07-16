@@ -123,32 +123,24 @@ let addTopMenu = function(){
 
 addTopMenu();
 
-
 $('#buttonatag').click(function (e) {
-
 
     e.preventDefault(); // Prevent default Browser anchor-click behavior   
     if($(e.target).hasClass("fa") ){ 
         flag_fa=true;
-        $("#buttonatag").trigger('click'); 
-       
+        $("#buttonatag").trigger('click');        
     }
     else{
-
-       
-            let innerHTML = this.innerHTML;
-            if (innerHTML.includes('MENU') == true) {
-                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
-            }
-            else {
-                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
-            }
-        
-    }
-    
-
-   
+        let innerHTML = this.innerHTML;
+        if (innerHTML.includes('MENU') == true) {
+            this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+        }
+        else {
+            this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+        } 
+    }  
 });
+
 $(document).ready(function () {
     $(document).click(function (event) {
         var click = $(event.target);
@@ -158,4 +150,5 @@ $(document).ready(function () {
         }
     });
 });
+
 $('#navbarSupportedContent').collapse('hide');
