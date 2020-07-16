@@ -123,23 +123,31 @@ let addTopMenu = function(){
 
 addTopMenu();
 
-$('#buttonatag').click(function () {
-    let innerHTML = this.innerHTML;
-    if (innerHTML.includes('MENU') == true) {
-        this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+
+$('#buttonatag').click(function (e) {
+
+
+    e.preventDefault(); // Prevent default Browser anchor-click behavior   
+    if($(e.target).hasClass("fa") ){ 
+        flag_fa=true;
+        $("#buttonatag").trigger('click'); 
+       
     }
-    else {
-        this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+    else{
+
+       
+            let innerHTML = this.innerHTML;
+            if (innerHTML.includes('MENU') == true) {
+                this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
+            }
+            else {
+                this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
+            }
+        
     }
-});
-$('.test #buttonatag fa-bars').click(function () {
-    let innerHTML = this.innerHTML;
-    if (innerHTML.includes('MENU') == true) {
-        this.innerHTML = 'CLOSE<br><i  class="fa fa-times"></i>';
-    }
-    else {
-        this.innerHTML = 'MENU<br><i  class="fa fa-bars"></i>';
-    }
+    
+
+   
 });
 $(document).ready(function () {
     $(document).click(function (event) {
