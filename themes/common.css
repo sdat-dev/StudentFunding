@@ -56,6 +56,90 @@ Primary use:    Common.css file used for styling header, footer and
     background: transparent;
 }
 
+
+/* for twitter link below header image*/
+.buffer {
+    height: 100px;
+    width: 100%;
+}
+
+
+
+
+.content-tool-bar{
+    position: relative;
+}
+
+#social-media-button{
+    color: white;
+    background-color: #46166C;
+    padding: 9px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 32px;
+    border-radius: 1%;
+}
+
+#social-media-button > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+#social-media-button > a img{
+    height: 30px;
+}
+
+#message-button{
+    color: #46166C;
+    background-color:#eeb211;;
+    padding: 4px 5px 7px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'News Cycle', Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 1%;
+    position: absolute;
+    top: 0px;
+}
+
+.button-link{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    line-height: 22px;
+    width: 200px;
+    position: relative;
+}
+
+.button-link > .link-text{
+    left: 5px;
+    position: relative;
+    width: 160px;
+    text-align: left;
+}
+
+.button-link > .link-img{
+   display: inline;
+}
+
+.link-img > img{
+    width:35px;
+    float: right;
+    position: absolute; 
+    top: 8px; 
+    right:5px;
+}
+
+/* end of twitter link*/
+
+
+
+
+
+
 #navigation-bar {
     list-style-type: none;
     padding-bottom: 30px;
