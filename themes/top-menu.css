@@ -283,3 +283,104 @@ ul .listSub a:hover, ul .listSub a:focus {
 .fa-facebook-f:hover{
     color:yellow;
 }
+
+/* search  button*/
+
+.btn1 {
+    background: none;
+    border: none;
+    outline: none !important;
+    color:white;
+    box-shadow: none !important; 
+  }
+  
+.btn1 :focus{
+
+    outline:0 !important;
+    box-shadow: none !important; 
+}
+
+
+.fa-search:hover{
+  
+    color:#eeb211;
+   
+  }
+
+
+
+.fa-times:hover{
+  
+    color:#eeb211;
+   
+  }
+
+
+  .btn1:hover{
+    color:#eeb211;
+  }
+  
+  .mainSearch {
+      
+      position: relative;
+      padding-right:20px;
+      width:auto;
+    
+}
+     
+
+
+  
+  .hidden{
+      display:none;
+      
+    
+      
+  }
+  
+   .inlineDisplay{
+      display:inline-block;
+     
+     
+  } 
+  
+  .searchInput {
+      background-color: white;
+      
+  
+      padding-right: 0;
+     width: 200px;
+        padding-left: 10px;
+      height: 25px;
+      border-radius: 0 !important;
+      vertical-align: middle;
+
+     
+  
+  }
+  
+  .submitButton {
+      background: #eeb211;
+      height: 26px;
+      color:#46166b;
+      line-height: 21px;
+      right: 15px;
+      padding-left: 10px;
+      padding-right:10px;
+
+      vertical-align: middle;
+      padding-bottom: 0px;
+      margin-top: 0px;
+  
+  }
+
+  .marginChange {
+    margin-right:-305px;
+  }
+
+
+
+  .topnav-right a:hover {
+    color:#edba32;
+    text-decoration: none;
+}
