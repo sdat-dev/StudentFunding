@@ -11,7 +11,7 @@ let addTopMenu = function(){
                                 '<a href="https://www.albany.edu/apply-now">APPLY</a>'+
                                 '<a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&gid=2&pgid=2040&appealcode=uahome">'+
                                 '   GIVE</a>'+ 
-                                '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
+                                /* '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
                                 '<span class="fa fa-search"></i>'+
                                 '</button>'+
     
@@ -19,11 +19,34 @@ let addTopMenu = function(){
                                 '<span class="mainSearch" style="margin-right:-307px; display:inline-block;">'+
                                 '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="times-button">'+
                                 '<span class="fa fa-times"></i>'+
-                                '</button>'+
+                                '</button>'+ */
+                                '</div>'+
+                                
+
+
+                                '<div class="searchTop"  style="display:inline">' +
+                               ' <form class="searchbox"  > '+
+                               '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1" id="search-toggle">'+
+                               '<span class="fa fa-search" style="line-height: 50px; font-size: 20px;"></i>'+
+                               '</button>'+
+
+                               '<button type="button" style="padding-left:25px;padding-right:15px;" class="btn1 hidden11 " id="times-button">'+
+                               '<span class="fa fa-times" style="line-height: 50px; font-size: 20px;"></i>'+
+                               '</button>'+
+                                '<input  type="search" style=" width:0px; height:0px; margin-left:20px;" class="searchbox-input" id="textInput" >'+
+                               '<input class="submitButton"  style=" width:0px; height:0px; margin-bottom:5px;" value="Search" type="submit" onclick="getValue()">'+
+
+
                                
-                                '<input  style="vertical-align:middle;" class="searchInput" id="textInput" type="text"><input class="submitButton" value="Search" type="submit" onclick="getValue()">'+
-                                '</span>'   +
+                            '</form>' +
                             '</div>'+
+                                    
+
+                               
+
+
+
+                              
 
                             
                         '</div>';
@@ -93,35 +116,35 @@ let addTopMenu = function(){
                                         '</ul>'+
                                     '</div>'+
                                 '</div>'+
-                                '<div class="d-flex justify-content-center">'+
+                                '<div class="d-flex justify-content-center" style="height:55px">'+
                                     '<div class=" p-2">'+ 
                                         '<a  href="https://www.albany.edu/main/facebook.shtml">'+
-                                            '<span class="fab fa-facebook-f" style="font-size:24px; color:white"></span>'+
+                                            '<span class="fab fa-facebook-f" style="font-size:22px; color:white"></span>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/twitter.shtml">'+
-                                            '<i class="fab fa-twitter" style="font-size:24px;color:white"></i>'+
+                                            '<i class="fab fa-twitter" style="font-size:22px;color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.instagram.com/ualbany/">'+
-                                            '<i class="fab fa-instagram" style="font-size:24px; color:white"></i>'+
+                                            '<i class="fab fa-instagram" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.snapchat.com/add/ualbany">'+
-                                            '<i class=" fab fa-snapchat" style="font-size:24px; color:white"></i>'+
+                                            '<i class=" fab fa-snapchat" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/youtube.shtml">'+
-                                            '<i class=" fab fa-youtube"  style="font-size:24px; color:white"></i>'+
+                                            '<i class=" fab fa-youtube"  style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                     '<div class="p-2">'+ 
                                         '<a href="https://www.albany.edu/main/linkedin.shtml">'+
-                                            '<i class="  fab fa-linkedin" style="font-size:24px; color:white"></i>'+
+                                            '<i class="  fab fa-linkedin" style="font-size:22px; color:white"></i>'+
                                         '</a>'+
                                     '</div>'+
                                 '</div>'+
@@ -173,90 +196,79 @@ $(document).ready(function () {
     });
 
 
-var flag=false;
-   /*  $('#search-toggle').click(function() {
-       //$('.mainSearch').removeClass('hidden');
-        $('.mainSearch').addClass('inlineDisplay');
-        $('.search-button').addClass('hidden');
-        $('#search-toggle').addClass('hidden');
+   
 
 
-       //$('.mainSearch').toggle("slide", { direction: "left" }, 5000);
+    var submitIcon = $('#search-toggle');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function(){
+       
+           $(".topnav-right").animate({ "margin-left":  "416px" },"fast");    
+
+         
+            searchBox.addClass('searchbox-open');
 
 
-        $('.mainSearch').show('slow');   
-            
-  
-      });
+            $('#search-toggle').addClass('hidden11');
+            $('#times-button').removeClass('hidden11');
+            $('.searchTop').css("display","inline");
+            setTimeout(showpanel, 200);
+    });  
      
+    function showpanel(){
+        $('.searchbox-input').css("width","200px");  
+        $('.searchbox-input').css("height","25px");
+
+
+        $('.submitButton').css("width","90px");  
+        $('.submitButton').css("height","25px");
+    }
+
+
+    $('#times-button').click(function() {
+       
+          $(".searchBox").toggleClass('hide');
+          $('.searchbox-input').css("width","0px");  
+          $('.searchbox-input').css("height","0px");
+          $('.submitButton').css("width","0px");  
+          $('.submitButton').css("height","0px");
+          $('#search-toggle').removeClass('hidden11');
+          $('#times-button').addClass('hidden11');
+
+          searchBox.removeClass('searchbox-open');
+
+          $(".topnav-right").animate({ "margin-left":  "730px" },"fast");    
+
   
-      $('#times-button').click(function() {
-      //  $('.mainSearch').addClass('hidden');
-        //$('.mainSearch').removeClass('inlineDisplay');
-        $('.search-button').removeClass('hidden');
-        $('#search-toggle').removeClass('hidden');
+          
+  
+        });
 
-      //  $('.mainSearch').toggle("slide", { direction: "right" }, 1000);
-
-        $('.mainSearch').hide('slow');   
-
-      });
- */
+     
 
 
-$('#search-toggle').one('click', function() {
-
-    $(".mainSearch").animate({ "margin-right":  "0px" },500);    
-    flag=true;
 });
 
 
 
-
-$('#search-toggle').click(function() {
-   //$('.mainSearch').removeClass('hidden');
-   if(flag){
-    $('.mainSearch').addClass('inlineDisplay');
-    // $('.search-button').addClass('hidden');
-     $('#search-toggle').addClass('hidden');
-
-
-    //$('.mainSearch').toggle("slide", { direction: "left" }, 5000);
-
-   // $(".mainSearch").animate({marginRight: "-300px"}, 500 );
-   //  $('.mainSearch').toggle("slide");   
-     
-   $(".mainSearch").animate({ "margin-right":  "0px" },500); 
-   }
-   
-   });
-  
-
-   $('#times-button').click(function() {
-   //  $('.mainSearch').addClass('hidden');
-     //$('.mainSearch').removeClass('inlineDisplay');
-    // $('.search-button').removeClass('hidden');
-$('#search-toggle').removeClass('hidden');
-
-   //  $('.mainSearch').toggle("slide", { direction: "right" }, 1000);
-
-
-   $(".mainSearch").animate({ "margin-right":  "-307px" },500); 
-   
-
-   // $('.mainSearch').hide('slow');   
-
-   });
+function buttonUp(){
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if( inputVal !== 0){
+        $('.searchbox-icon').css('display','none');
+    } else {
+        $('.searchbox-input').val('');
+        $('.searchbox-icon').css('display','block');
+    }
+}
 
 
 
 
-     
-  
-     
 
 
-});
 $('#navbarSupportedContent').collapse('hide');
 
 
