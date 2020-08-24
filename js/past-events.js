@@ -13,8 +13,8 @@ request.onload = function () {
 
     pastevents = events.filter(function (event) {
         let when = event.When.split(",")[1];
-        var month = getmonth(when.trim().split(" ")[0]);
-        var day = (when.trim().split(" ")[1]);
+        var month = getmonth(when.trim().split(" ")[0]);
+        var day = (when.trim().split(" ")[1]);
         day = day.substring(0, day.length - 2);
         var eventdate = new Date();
         eventdate.setMonth(month);
