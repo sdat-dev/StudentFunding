@@ -7,7 +7,7 @@ let eventsContainer = document.getElementsByClassName('event-container')[0];
 request.onload = function () {
     const eventsjson = request.response;  
     //condition for checking if browser is Internet Explorer
-    let events =  ((false || !!document.documentMode))? JSON.parse(eventsjson).events: eventsjson.events;
+    let events =  ((false || !!document.documentMode))? JSON.parse(eventsjson): eventsjson;
     
     let content = '';
 
