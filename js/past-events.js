@@ -30,8 +30,12 @@ request.onload = function () {
         '   <div class = "event-box">'+
         '       <button class="event-title"><h4 class="title_text"><span class="spanbold">' + event.Title +'</span><br>('+
         event.Purpose +
-        '       )</h4><img class="title_icon" src="assets/images/'+event.image+ '"/></button>' +
-        '       <div class="event-info"><p><span class = "spanbold">When: </span>'+ event.When+'</p>'+
+        '       )</h4>';
+        if(event.hasOwnProperty('image'))
+        {
+            content +='<img class="title_icon" src="assets/images/'+event.image+ '"/>';
+        }
+        content +='</button><div class="event-info"><p><span class = "spanbold">When: </span>'+ event.When+'</p>'+
         '       <p><span class = "spanbold">Where: </span>'+ event.Where+'</p>';
         if(event.hasOwnProperty('Description'))
         {

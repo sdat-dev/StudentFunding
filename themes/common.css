@@ -559,7 +559,7 @@ table, tr, th,td{
 
 @media only screen and (min-width: 768px) {
     #navigation-bar {
-        margin-left: 50px;
+        margin-left: 10px;
     }
 
     .home-banner-left-block{
@@ -614,7 +614,7 @@ table, tr, th,td{
     }
 
     #navigation-bar {
-        margin-left: 75px;
+        margin-left: 20px;
     }
     .main-content> #search-box{       
         width: 510px;
@@ -628,7 +628,7 @@ table, tr, th,td{
 
 @media only screen and (min-width: 1200px) {
     #navigation-bar {
-        margin-left: 100px;
+        margin-left: 6%;
     }
 
     .home-banner-left-block{
