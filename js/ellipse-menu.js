@@ -17,13 +17,13 @@ function clickHandler(button)
         switch(button.id){
             case "embutton1":
                 desc.innerHTML = "Fellowships provide unique opportunities to conduct novel research,"+
-                                 "teach in a classroom, provide community service, or even work in "+
+                                 " teach in a classroom, provide community service, or even work in "+
                                  "a public or private sector organization positioning you for future success";
                                  desc.classList.add("embutton1");
                 break;
             case "embutton2":
                 desc.innerHTML = "Mentorship will provide important opportunities strengthen your" + 
-                                 "skills and knowledge, while providing  professional socialization and networking"+
+                                 " skills and knowledge, while providing  professional socialization, networking"+
                                  " and personal support";
                                  desc.classList.add("embutton2");
                 break;
@@ -34,8 +34,8 @@ function clickHandler(button)
                                  desc.classList.add("embutton3");
                 break;
             case "embutton4":
-                desc.innerHTML = "Opportunity to acquire new knowledge and skills to enhance your transition"+
-                                 " from to further your education or to pursue a future profession";
+                desc.innerHTML = "Opportunity to acquire new knowledge and skills"+
+                                 " to further your education or to pursue a future profession";
                                  desc.classList.add("embutton4");
                 break;
             case "embutton5":
