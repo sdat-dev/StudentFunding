@@ -10,7 +10,7 @@ request.onload = function () {
     let events =  ((false || !!document.documentMode))? JSON.parse(eventsjson): eventsjson;
     
     let content = '';
-    let sortedActivities =[];
+    let fina_array =[];
     let sortedDataevent=[];
    
     upcommingevents = events.filter(function (event) {
@@ -19,7 +19,7 @@ request.onload = function () {
         if(typeof when === "undefined"){
             when = event.When;
         }
-        var month = getmonth(when.trim().split(" ")[0]);
+        var month = getmonth(when.trim().split(" ")[0])+1;
         if(typeof month === "undefined"){
             month = "";
         }
@@ -51,29 +51,45 @@ request.onload = function () {
 
 
 
-        return eventdate > today;
+        return sortedDataevent;
     });
+
+
+
+
 
      upcommingevents.forEach(function(event){
 
-       
-
-        sortedDataevent.sort(function (a,b) {
-            // Split the text into [ date, month ]
+        let when = event.When.split(",")[1];
+        if(typeof when === "undefined"){
+            when = event.When;
+        }
+        var month = getmonth(when.trim().split(" ")[0])+1;
+        if(typeof month === "undefined"){
+            month = "";
+        }
+        var day = (when.trim().split(" ")[1]);
+        if(typeof day === "undefined"){
+            day="";
+        }else{
            
-    
-            // Set the Date() objects to the dates of the items
+        day = day.substring(0, day.length - 2);
             
-    
-            /* A math operation converts a Date object to a number, so 
-               it's enough to just return date1 - date2 */
-            return a - b;
-        });
+        }
 
-        return sortedDataevent;
+        var eventdate = new Date();
+        eventdate.setMonth(month);
+        eventdate.setDate(day);
+        var today = new Date();
+
+        if(eventdate > today){
+            fina_array.push(event);
+        }
+
+        
 }); 
 
-    upcommingevents.forEach(function(event){
+    fina_array.forEach(function(event){
        let purpose_data='';
         if(event.Purpose === '' || typeof event.Purpose === "undefined" ){
 

@@ -10,13 +10,16 @@ request.onload = function () {
     let events =  ((false || !!document.documentMode))? JSON.parse(eventsjson): eventsjson;
     
     let content = '';
+    let sortedDataevent=[];
+    let finalArr=[];
+    var i=0;
 
     pastevents = events.filter(function (event) {
         let when = event.When.split(",")[1];
         if(typeof when === "undefined"){
             when = event.When;
         }
-        var month = getmonth(when.trim().split(" ")[0]);
+        var month = getmonth(when.trim().split(" ")[0])+1;
         if(typeof month === "undefined"){
             month = "";
         }
@@ -30,17 +33,53 @@ request.onload = function () {
         eventdate.setMonth(month);
         eventdate.setDate(day);
         var today = new Date();
-        return eventdate < today;
+
+
+
+
+        sortedDataevent.push(eventdate);
+        
+         sortedDataevent.sort(function (a,b) {
+        
+             return a - b;
+         });
+
+
+        
+
+    return eventdate < today;
+       
     });
 
 
+  
+
+
     pastevents.forEach(function(event){
+
+    let purpose_data='';
+    if(event.Purpose === '' || typeof event.Purpose === "undefined" ){
+
+    }
+    else{
+        purpose_data = event.Purpose;
+    }
+
+
+
+
+
         content = content + 
         '<div class = "col-sm-6 col-md-6 col-lg-6 col-xl-6 no-padding-left">'+
         '   <div class = "event-box">'+
-        '       <button class="event-title"><h4 class="title_text"><span class="spanbold">' + event.Title +'</span><br>('+
-        event.Purpose +
-        '       )</h4>';
+        '       <button class="event-title"><h4 class="title_text"><span class="spanbold">' + event.Title +'</span><br>';
+        if(purpose_data !== ''){
+            content +='(' +purpose_data +')</h4>';
+        }
+       else{
+        content +='</h4>';
+
+       }
         if(event.hasOwnProperty('image'))
         {
             content +='<img class="title_icon" src="assets/images/'+event.image+ '"/>';
