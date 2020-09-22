@@ -35,6 +35,29 @@ request.onload = function () {
         eventdate.setDate(day);
         var today = new Date();
         sortedDataevent.push(eventdate);
+       /* 
+        sortedDataevent.sort(function (a,b) {
+            // Split the text into [ date, month ]
+           
+    
+            // Set the Date() objects to the dates of the items
+            
+    
+            /* A math operation converts a Date object to a number, so 
+               it's enough to just return date1 - date2 
+            return a - b;
+        });
+ */
+
+
+
+        return eventdate > today;
+    });
+
+     upcommingevents.forEach(function(event){
+
+       
+
         sortedDataevent.sort(function (a,b) {
             // Split the text into [ date, month ]
            
@@ -47,21 +70,8 @@ request.onload = function () {
             return a - b;
         });
 
-
-
-
         return sortedDataevent;
-    });
-
-  /*   upcommingevents.forEach(function(event){
-
-
-        let event_data = event.When.split(",");
-        let months_Data=event_data[1].split(" ");
-         sortedActivities  = getmonth(months_Data[1]).sort((a, b) => b - a);
-        // sortedDataevent.push()
-
-}); */
+}); 
 
     upcommingevents.forEach(function(event){
        let purpose_data='';
