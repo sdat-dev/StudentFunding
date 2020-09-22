@@ -11,10 +11,22 @@ request.onload = function () {
     
     let content = '';
     upcommingevents = events.filter(function (event) {
+
         let when = event.When.split(",")[1];
+        if(typeof when === "undefined"){
+            when = event.When;
+        }
         var month = getmonth(when.trim().split(" ")[0]);
+        if(typeof month === "undefined"){
+            month = "";
+        }
         var day = (when.trim().split(" ")[1]);
+        if(typeof day === "undefined"){
+            day="";
+        }else{
         day = day.substring(0, day.length - 2);
+        }
+
         var eventdate = new Date();
         eventdate.setMonth(month);
         eventdate.setDate(day);
