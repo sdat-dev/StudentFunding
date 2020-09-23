@@ -59,7 +59,7 @@ request.onload = function () {
         }
         if(eventdate1 == eventdate2)
             return 0;
-        return eventdate1 <= eventdate2 ? -1 : 1;
+        return eventdate1 > eventdate2 ? -1 : 1;
     });
 
     pastevents.forEach(function(event){
