@@ -93,7 +93,7 @@ request.onload = function () {
         }
         if(event.hasOwnProperty('recordings'))
         {
-            content += '<p><span class = "spanbold">Recording:</span><a href="' + event.recordings +'" target="_blank"> link</a>';
+            content += '<p><span class = "spanbold">Recording:</span><a href="' + event.recordings +'" target="_blank"> Link </a>';
             if(event.hasOwnProperty('password'))
                 content += '<span class="italicfont">(Password:' + event.password + ')</span>';
                 content += '</p>';
