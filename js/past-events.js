@@ -81,6 +81,23 @@ request.onload = function () {
         {
             content = content +  '<p><span class = "spanbold">Description: </span>'+ event.Description+'</p>';
         }
+        if(event.hasOwnProperty('handout'))
+        {
+            content += '<p><span class = "spanbold">Handouts:</span></br>'+
+                        '<ul class="dot-list"><li><a href="' + event.handout +'" target="_blank">Handout1</a></li>';
+            if(event.hasOwnProperty('handout2'))  
+            {
+                content += '<li><a href="' + event.handout2 +'" target="_blank">Handout2</a></li>';
+            }     
+            content += '</ul></p>';         
+        }
+        if(event.hasOwnProperty('recordings'))
+        {
+            content += '<p><span class = "spanbold">Recording:</span><a href="' + event.recordings +'" target="_blank"> link</a>';
+            if(event.hasOwnProperty('password'))
+                content += '<span class="italicfont">(Password:' + event.password + ')</span>';
+                content += '</p>';
+        }
         content = content + '      </div>'+
         '   </div>' +
         '</div>';

@@ -484,6 +484,10 @@ address>a:hover {
    font-style: italic;
 }
 
+.italicfont{
+    font-style: italic;
+}
+
 .email::before{
     content: "Email: ";
     font-style:normal;
