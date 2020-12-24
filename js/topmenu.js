@@ -220,12 +220,9 @@ $(document).ready(function () {
     function showpanel(){
         $('.searchbox-input').css("width","200px");  
         $('.searchbox-input').css("height","25px");
-
-
         $('.submitButton').css("width","90px");  
         $('.submitButton').css("height","25px");
     }
-
 
     $('#times-button').click(function() {
        
@@ -239,10 +236,7 @@ $(document).ready(function () {
 
           searchBox.removeClass('searchbox-open');
 
-          $(".topnav-right").animate({ "margin-left":  "730px" },"fast");    
-
-  
-          
+          $(".topnav-right").animate({ "margin-left":  "730px" },"fast");              
   
         });
 
