@@ -11,6 +11,8 @@ request.onload = function () {
     
     let content = '';
     datedevents = events.filter(function (event) {
+        if(event.When == "Every Thursday , Noon")
+            return true;
         if(event.When.indexOf(",") > 0){
             let when = event.When.split(",");
             var month = getmonth(when[1].trim().split(" ")[0]);
