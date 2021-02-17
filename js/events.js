@@ -35,6 +35,15 @@ request.onload = function () {
     });
      
     datedevents = datedevents.sort((a, b)=>{
+        if(a.When == "Every Thursday , Noon")
+        {
+            return -1;
+        }
+
+        if(b.When == "Every Thursday , Noon")
+        {
+            return 1;
+        }
         //Date 1
         let when = a.When.split(",");
         var month = getmonth(when[1].trim().split(" ")[0]);
