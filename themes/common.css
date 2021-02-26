@@ -508,6 +508,16 @@ address>a:hover {
     display: block;
 }
 
+.w-100{
+    width: 100%;
+}
+
+#page-header {
+    width: 100%;
+    position: relative;
+    padding-top: 134px;
+}
+
 #search-button{
     height: 40px;
     width: 40px;

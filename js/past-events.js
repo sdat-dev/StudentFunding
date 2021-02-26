@@ -10,8 +10,10 @@ request.onload = function () {
     let events =  ((false || !!document.documentMode))? JSON.parse(eventsjson): eventsjson;
     
     let content = '';
-
+    
     pastevents = events.filter(function (event) {
+        if(event.When == "Every Thursday , Noon")
+            return true;
         if(event.When.indexOf(",") > 0){
             let when = event.When.split(",");
             var month = getmonth(when[1].trim().split(" ")[0]);
@@ -34,6 +36,16 @@ request.onload = function () {
     });
 
     pastevents.sort((a, b)=>{
+        if(a.When == "Every Thursday , Noon")
+        {
+            return -1;
+        }
+
+        if(b.When == "Every Thursday , Noon")
+        {
+            return 1;
+        }
+        
         let when = a.When.split(",");
         var month = getmonth(when[1].trim().split(" ")[0]);
         var day = (when[1].trim().split(" ")[1]).trim();
