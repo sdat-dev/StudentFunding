@@ -47,6 +47,12 @@
             "Link": "https://www.youtube.com/embed/r_BDHz0rPII",
             "Agency":"National Science Foundation (NSF)",
             "logo":"nsf.png"
+        },
+        {
+            "Title": "NIH NRSA F31 Predoctoral Fellowship Workshop by Dr. Miguel Garcia-Diaz",
+            "Link": "https://www.rfsuny.org/media/rfsuny/videos/Job%201272%20-%20SUNY-Stony%20Brook%20NIH%20NRSA%20Webinar%20Final%20v021721%20%281%29.mp4?mc_cid=fce45f51f8&mc_eid=cc1ee7cf50",
+            "Agency":"National Institutes of Health (NIH)",
+            "logo":"nih.png"
         }
     ]
 }
