@@ -23,7 +23,8 @@ request.onload = function () {
             eventdate.setMonth(month);
             eventdate.setDate(day);
             if(when.length > 3){
-                var year = when[2].trim();
+                when[2].substring()
+                var year = when[2].match(/\d{4}/g)[0];
                 eventdate.setFullYear(year);
             }
             var today = new Date();
@@ -54,7 +55,7 @@ request.onload = function () {
         eventdate1.setMonth(month);
         eventdate1.setDate(day);
         if(when.length > 3){
-            var year = when[2].trim();
+            var year = when[2].match(/\d{4}/g)[0]
             eventdate1.setFullYear(year);
         }
         // Date 2
@@ -66,7 +67,7 @@ request.onload = function () {
         eventdate2.setMonth(month);
         eventdate2.setDate(day);
         if(when.length > 3){
-            var year = when[2].trim();
+            var year = when[2].match(/\d{4}/g)[0]
             eventdate2.setFullYear(year);
         }
         if(eventdate1 == eventdate2)

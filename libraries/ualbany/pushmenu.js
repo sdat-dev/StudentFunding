@@ -29,11 +29,11 @@
           }
         });
       }
-      /*
+
       if (!$ul.hasClass('third-processed')) {
         $ul.addClass('third-processed');
-        $ul.find('li.expanded.dropdown ul li.expanded').addClass('dropdown').children('a').addClass('dropdown-toggle').attr('data-target','#').attr('data-toggle','dropdown').attr('target','#');
-        $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+        $ul.find('li.expanded.dropdown ul li.expanded').addClass('dropdown').children('a').addClass('dropdown-toggle').attr('data-target', '#').attr('data-toggle', 'dropdown').attr('target', '#');
+        $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
           // Avoid following the href location when clicking
           event.preventDefault();
           // Avoid having the menu to close when clicking
@@ -41,10 +41,10 @@
           // If a menu is already open we close it
           $('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');
           // opening the one you clicked on
-          //$(this).parent().addClass('open');
+          $(this).parent().addClass('open');
         });
       }
-      */
+
 
       if (!$('body').hasClass('drawer')) {
         $('body').addClass('drawer drawer--left');
@@ -54,15 +54,15 @@
 
         $('ul.drawer-menu > li:has(ul)').addClass('custom-dropdown').children('a').addClass('drawer-menu-item').siblings('ul').addClass('drawer-dropdown-menu');
         $('ul.drawer-menu ul.drawer-dropdown-menu > li:has(ul)').addClass('custom-subdown').children('a').addClass('sub-dropdown').siblings('ul').addClass('sub-dropdown-menu');
-        /*
-                $('ul.drawer-menu > li:has(ul) > a').addClass('drawer-menu-item').attr({
-                  'data-target': "#",
-                  'href': "#",
-                  'data-toggle': "dropdown",
-                  'role': "button",
-                  'aria-expanded': "false"
-                });
-        */
+
+        $('ul.drawer-menu > li:has(ul) > a').addClass('drawer-menu-item').attr({
+          'data-target': "#",
+          'href': "#",
+          'data-toggle': "dropdown",
+          'role': "button",
+          'aria-expanded': "false"
+        });
+
 
         $('.drawer').drawer({
           class: {
@@ -113,7 +113,7 @@
         });
 
         $('.drawer').on('drawer.opened', function () {
-          //$('ul.drawer-menu > li:has(ul):eq(0)').addClass('open');
+          $('ul.drawer-menu > li:has(ul):eq(0)').addClass('open');
         });
 
         $('a.dropdown-toggle').click(function (e) {

@@ -10,7 +10,7 @@ Primary use:    index.css file used for styling home page
 
 .home-logo-container{
     margin: 10px 20px 0px 20px;
-    width: 300px;
+    width: 220px;
     text-align: center;
 }
 
@@ -41,5 +41,4 @@ Primary use:    index.css file used for styling home page
 
 .logos-content{
     padding-left: 50px;
-    
 }

@@ -169,8 +169,9 @@ a:hover {
 }
 
 .page-banner-image-wrapper {
-    position: relative;
     width: 100%;
+    position: relative;
+    padding-top: 134px;
 }
 
 .landing-page-image {
@@ -273,65 +274,6 @@ a:hover {
     flex-wrap: wrap;
 }
 
-#footer {
-    background: #333333 url('../assets/images/mapimg_left.jpg') no-repeat left top;
-    position: relative;
-    padding: 20px;
-    min-height: 360px;
-}
-
-#footer-content {
-    margin-left: 360px;
-    margin-top: 40px;
-    display: flex;
-}
-
-.footer-logo-wrapper {
-    height: 39px;
-    width: 100%;
-}
-
-.footer-logo {
-    max-width: 100%;
-}
-
-.footer-navigation-header {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 24px;
-    padding: 0px;
-    font-family: 'PublicSans', sans-serif;
-}
-
-.footer-navigation {
-    list-style-type: none;
-    font-family: 'PublicSans', sans-serif;
-}
-
-.footer-navigation>li {
-    padding-bottom: 7px;
-}
-
-.footer-navigation>li>a {
-    color: #DDDDDD;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-address, address>a {
-    color: #e4e4e4;
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: normal;
-    text-transform: none;
-}
-
-address>a:hover {
-    color: #e4e4e4;
-    text-decoration: underline;
-}
-
   /* The dropdown container */
 .dropdown {
     overflow: visible;
@@ -414,8 +356,6 @@ address>a:hover {
 .num-list>li{
     padding: 0px 0 0 20px
 }
-
-
 
 .justify-text{
     text-align: justify;
@@ -506,16 +446,6 @@ address>a:hover {
 
 .main-content>#search-box-results{
     display: block;
-}
-
-.w-100{
-    width: 100%;
-}
-
-#page-header {
-    width: 100%;
-    position: relative;
-    padding-top: 134px;
 }
 
 #search-button{

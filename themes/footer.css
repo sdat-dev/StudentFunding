@@ -40,7 +40,7 @@ footer.footer {
 
 footer.footer .footer-new {
     position: relative;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 90%), url('../assets/images/footer-logo.JPG');
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, 0) 90%), url('../assets/images/ualbany/footer-logo.JPG');
     padding: 5em 3em 1.5em 3em;
     min-height: 400px;
     background-size: cover;
@@ -73,15 +73,18 @@ footer.footer .footer-end {
     font-size: .8em;
     font-weight: normal;
     text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
-footer.footer .footer-end .address-phone {
+/* footer.footer .footer-end .address-phone {
     padding: 2em 0 0;
 }
 
 footer.footer .footer-end .copyright {
     padding: 0.5em 0 2em;
-}
+
+} */
 
 footer.footer .footer-end a {
     color: #fff;
@@ -109,6 +112,10 @@ footer.footer .footer-new a, footer.footer .footer-new p {
     padding-left: 15px
 }
 
+.margin-zero{
+    margin: 0 0 0px !important;
+}
+
 @media (min-width:768px) {
     .col-sm-offset-0 {
         margin-left: 18%;
@@ -117,6 +124,10 @@ footer.footer .footer-new a, footer.footer .footer-new p {
         width: 75%;
     }
     .address-phone {
+        padding: 0.65em 1em;
+        text-align: left;
+    }
+    .copyright {
         padding: 0.65em 1em;
         text-align: right;
     }

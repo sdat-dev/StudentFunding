@@ -5,16 +5,17 @@ let addTopHeader = function () {
     sidemenu.classList.add("navbar-default");
     sidemenu.classList.add("container-fluid");
     let content = "";
-    content += '<div class="container-fluid">'+
+    content += 
+    '<div class="container-fluid">'+
     '<div class="navbar-header">'+
         '<div class="region region-navigation"><a href="#" class="menu-burger" title="Toggle Mobile Menu Navigation"><span class="fa fa-bars" role="img" aria-label="mobile menu icon" aria-hidden="true"></span><span class="sr-only">Toggle Mobile Menu Navigation</span></a>'+
             '<section>'+
                 '<div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">'+
                     '<div id="logo">'+
                         '<a aria-label="University at Albany Home" href="https://www.albany.edu">'+
-                            '<img id="albany-logo-minerva" alt="Minerva" src="/assets/images/ualbany/albany-logo-minerva.png">'+
-                            '<img id="albany-logo-text" alt="University at Albany" src="/assets/images/ualbany/albany-logo-text.png">'+
-                            '<img id="albany-logo-mobile" alt="UAlbany" src="/assets/images/ualbany/ualbany-logo.png">'+
+                            '<img id="albany-logo-minerva" alt="Minerva" src="assets/images/ualbany/albany-logo-minerva.png">'+
+                            '<img id="albany-logo-text" alt="University at Albany" src="assets/images/ualbany/albany-logo-text.png">'+
+                            '<img id="albany-logo-mobile" alt="UAlbany" src="assets/images/ualbany/ualbany-logo.png">'+
                         '</a>'+
                     '</div>'+
                     '<nav id="top-nav" aria-label="MyUAlbany and Give Links">'+
@@ -37,7 +38,7 @@ let addTopHeader = function () {
                                     '<li><a href="http://library.albany.edu/">Libraries</a></li>'+
                                 '</ul>'+
                             '</li>'+
-                            '<li><a href="https://www.albany.edu/admissions">Admissions <span class="appear">&amp; Aid </span></a>'+
+                            '<li><a href="https://www.albany.edu/admissions">Admissions &amp; Aid<span class="appear"></span></a>'+
                                 '<ul>'+
                                     '<li><a href="https://www.albany.edu/admissions-undergraduate">Freshman</a></li>'+
                                     '<li><a href="https://www.albany.edu/admissions-transfer">Transfer</a></li>'+
@@ -91,12 +92,7 @@ let addTopHeader = function () {
                             '<li class="appear"><a href="https://ualbanysports.com/">Athletics</a></li>'+
                         '</ul>'+
                     '</nav>'+
-                    '<div class="search-block-form albany-utilities collapse small text-right search-processed">'+
-                        '<form class="headerSearchForm form-type-search form-search" method="get" onsubmit="return albany_search(type.value, albany_URLEncode(keywords.value));">'+
-                            '<select name="type" title="Select Search Type" class="headerSearchSelect" style="height:27px; display: none"><option selected="selected" value="GOOGLE">Albany Sites</option></select><label class="sr-only" for="global-search">Search UAlbany websites</label>'+
-                            '<input type="text" name="keywords" id="global-search" value="" size="45" class="headerSearchBox form-search glyphicon-search"><input type="submit" name="albanySearch" value="Search" title="Submit Search" class="headerSearchBtn form-submit search-button btn btn-sm btn-success s3-m-3">'+
-                        '</form>'+
-                    '</div>'+
+
                 '</div>'+
             '</section>'+
 
@@ -127,6 +123,19 @@ let addTopHeader = function () {
                                         '<li><a href="https://www.albany.edu/a-z-index">A-Z Index</a></li>'+
                                     '</ul>'+
                                     '</li>'+
+                                    '<div class="search-block-form albany-utilities collapse small text-right">'+
+                                    '<form class="headerSearchForm form-type-search form-search" method="get"'+
+                                    'onsubmit="return albany_search(type.value, albany_URLEncode(keywords.value));">'+
+                                    '<select name="type" title="Select Search Type" class="headerSearchSelect"'+
+                                        'style="height:27px; display: none">'+
+                                        '<option selected="selected" value="GOOGLE">Albany Sites</option>'+
+                                    '</select><label class="sr-only" for="global-search">Search UAlbany websites</label>'+
+                                    '<input type="text" name="keywords" id="global-search" value="" size="45"'+
+                                        'class="headerSearchBox form-search glyphicon-search" /><input type="submit"'+
+                                        'name="albanySearch" value="Search" title="Submit Search"'+
+                                        'class="headerSearchBtn form-submit search-button btn btn-sm btn-success s3-m-3" />'+
+                                '</form>'+
+                                    '</div>'+
                                     '<li>'+
                                         '<div class="mobile-nav-toplink">'+
                                             '<a href="https://www.albany.edu/academics">Academics</a>'+
@@ -199,7 +208,7 @@ let addTopHeader = function () {
                                     '</li>'+
                                 '</ul>'+
                                 '<ul class="extra-nav">'+
-                                    '<li><a href="/myualbany">MYUAlbany</a></li>'+
+                                    '<li><a href="https://www.albany.edu/myualbany">MYUAlbany</a></li>'+
                                     '<li><a href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&amp;gid=2&amp;pgid=2040&amp;appealcode=uahome">Give</a>'+
                                     '</li>'+
                                 '</ul>'+
@@ -209,10 +218,25 @@ let addTopHeader = function () {
                 '</section>'+
             '</div>'+
         '</div>'+
-            '<section id="block-albany-searchblockbutton" class="search-button block block-block-content block-block-contentf5fc99ed-9b0b-4fef-9f5a-708a4da0e836 clearfix" data-block-plugin-id="block_content:f5fc99ed-9b0b-4fef-9f5a-708a4da0e836">'+
-                '<div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><a href="https://www.albany.edu/search-results">Search</a></p>'+
-                '</div>'+
-            '</section>'+
+
+        '<section id="block-albany-searchblockbutton"'+
+            'class="search-button block block-block-content block-block-contentf5fc99ed-9b0b-4fef-9f5a-708a4da0e836 clearfix"'+
+            'data-block-plugin-id="block_content:f5fc99ed-9b0b-4fef-9f5a-708a4da0e836">'+
+            '<div'+
+                'class="field field--name-body field--type-text-with-summary field--label-hidden field--item">'+
+                '<p><a href="/search-results">Search</a></p>'+
+            '</div>'+
+        '</section>'+
+
+        '<div class="search-block-form albany-utilities collapse small text-right search-processed">'+
+            '<form class="headerSearchForm form-type-search form-search" method="get" onsubmit="return albany_search(type.value, albany_URLEncode(keywords.value));">'+
+                '<select name="type" title="Select Search Type" class="headerSearchSelect" style="height:27px; display: none"><option selected="selected" value="GOOGLE">Albany Sites</option></select><label class="sr-only" for="global-search">Search UAlbany websites</label>'+
+                '<input type="text" name="keywords" id="global-search" value="" size="45" class="headerSearchBox form-search'+ 
+                'glyphicon-search"><input type="submit" name="albanySearch" value="Search" title="Submit Search" '+
+                'class="headerSearchBtn form-submit search-button btn btn-sm btn-success s3-m-3">'+
+            '</form>'+
+        '</div>'+
+
         '</div>'+
     '</div>'+
 '</div>'; 

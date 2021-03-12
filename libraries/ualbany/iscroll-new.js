@@ -287,8 +287,8 @@ var utils = (function () {
 			touchAction = 'pan-x';
 		}
 		if (addPinch && touchAction != 'none') {
-			// add pinch-zoom support if the browser supports it, but if not (eg. Chrome <55) do nothing
-			touchAction += ' pinch-zoom';
+			// add pinch- Session support if the browser supports it, but if not (eg. Chrome <55) do nothing
+			touchAction += ' pinch- Session';
 		}
 		return touchAction;
 	};
@@ -788,7 +788,7 @@ IScroll.prototype = {
 			// The wrapper should have `touchAction` property for using pointerEvent.
 			this.wrapper.style[utils.style.touchAction] = utils.getTouchAction(this.options.eventPassthrough, true);
 
-			// case. not support 'pinch-zoom'
+			// case. not support 'pinch- Session'
 			// https://github.com/cubiq/iscroll/issues/1118#issuecomment-270057583
 			if (!this.wrapper.style[utils.style.touchAction]) {
 				this.wrapper.style[utils.style.touchAction] = utils.getTouchAction(this.options.eventPassthrough, false);
