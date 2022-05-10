@@ -65,11 +65,28 @@ Primary use:    Common.css file used for styling header, footer and
 
 .details-button{
     background-color: #46166C;
-    padding: 3px 10px 3px 10px;
+    padding: 0.5em 2em!important;
+    padding-top: 0.5em !important;
+    padding-right: 2em !important;
+    padding-bottom: 0.5em !important;
+    padding-left: 2em !important;
     border-radius: 4%;
     color: white;
     font-size: 20px;
 }
+
+.details-button:hover{
+    background-color: white;
+    border-radius: 4%;
+    color:#46166C;
+    border: 1px solid #46166C;
+}
+
+.mav-header > .collapsed> i {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+} 
 
 .width100{
     width: 100%;

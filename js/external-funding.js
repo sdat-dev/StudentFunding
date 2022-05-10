@@ -277,7 +277,7 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
         // let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
         if(flag){
             content = content + '<div class = "display-flex opportunity-container search-container">' + 
-                '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin">' + arr[i].prog_title + '</h4>' + '<div class = "opp-details display-flex">' +
+                '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin"><b>' + arr[i].prog_title + '</b></h4><br>' + '<div class = "opp-details display-flex">' +
     
                 '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
                 '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + arr[i].spon_name +
@@ -287,12 +287,12 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
                 '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
                 '<i class="fas fa-calendar-day"></i> <strong>Date: </strong>' + dueDate +
                 '<br></div></div></div>' +
-                '<p class = "opp-description">' + description + '</p>';
+                '<br><p class = "opp-description">' + description + '</p>';
             if (arr[i].deadline_note != null && arr[i].deadline_note != "") {
                 content += buildduedatenote(arr[i].deadline_note);
             }
             if(arr[i].programurl != null){
-                content += '<br><p class="width100" style="padding-left: 15px;"><button type = "button" class = "details-button" onclick = "window.open(\'' + arr[i].programurl + '\',\'_blank\')">View Details</button></p>';
+                content += '<br><p class="width100"><button type = "button" class = "details-button" onclick = "window.open(\'' + arr[i].programurl + '\',\'_blank\')">View Details</button></p>';
             }else{
                 content += '<br><p class="width100"><button type = "button" class = "details-button" onclick = "window.open(\'https://spin.infoedglobal.com/Program.html?' + arr[i].id + '\',\'_blank\')">View Details</button></p>';
             }
