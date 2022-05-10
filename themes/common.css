@@ -63,8 +63,17 @@ Primary use:    Common.css file used for styling header, footer and
     width: 100%;
 }
 
+.details-button{
+    background-color: #46166C;
+    padding: 3px 10px 3px 10px;
+    border-radius: 4%;
+    color: white;
+    font-size: 20px;
+}
 
-
+.width100{
+    width: 100%;
+}
 
 .content-tool-bar{
     position: relative;

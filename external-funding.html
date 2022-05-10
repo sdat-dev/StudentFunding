@@ -4,22 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://www.albany.edu/sites/default/files/favicon_0.ico"
-        type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="https://www.albany.edu/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="themes/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="themes/bootstrap/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="themes/common.css" />
+    <link rel="stylesheet" href="themes/accordion-transparent-theme.css" />
     <link rel="stylesheet" href="themes/sidenav.css" />
     <link rel="stylesheet" href="themes/header.css" />
     <link rel="stylesheet" href="themes/footer.css" />
-    <link rel="stylesheet" href="themes/awards.css"/>
+    <link rel="stylesheet" href="themes/awards.css" />
+    <link rel="stylesheet" href="themes/accordion.css" />
     <title>
         Fellowships Navigator | University at Albany
     </title>
 </head>
+
 <body>
     <header id="navbar">
     </header>
@@ -50,12 +52,12 @@
                     <li class="navigation-item"><a href="index.html">HOME</a></li>
                     <li class="navigation-item"><a href="welcome.html">WELCOME</a></li>
                     <li class="navigation-item"><a href="why.html">WHY FELLOWSHIPS ARE IMPORTANT</a></li>
-                    <li class="navigation-item active-page"><a href="awards-funding.html">FUNDING OPPORTUNITIES</a></li>
+                    <li class="navigation-item"><a href="awards-funding.html">FUNDING OPPORTUNITIES</a></li>
                     <li class="navigation-sub-item"><a href="ualbany-awards.html">UAlbany Funding</a></li>
-                    <li class="navigation-sub-item"><a href="external-funding.html">External Funding</a></li>
+                    <li class="navigation-sub-item active-page"><a href="external-funding.html">External Funding</a></li>
                     <li class="navigation-sub-item"><a href="major-awards.html">Major Awards</a></li>
                     <li class="navigation-sub-item"><a href="other-funding.html">Other Prestigious Awards</a></li>
-                    <li class="navigation-sub-item"><a href="searchable-databases.html">Searchable Databases</a></li>
+                    <li class="navigation-sub-item"><a href="searchable-databases.html">Search Databases</a></li>
                     <li class="navigation-item"><a href="identify-goals.html">HOW TO WIN</a></li>
                     <li class="navigation-item"><a href="events.html">EVENTS</a></li>
                     <li class="navigation-item"><a href="meet-your-research-admin.html">MEET YOUR RESEARCH ADMINISTRATOR</a></li>
@@ -65,63 +67,28 @@
             </div>
             <div class="main-content col-sm-12 col-md-6 col-lg-8 col-xl-9">
                 <h2 class="content-header">
-                    FUNDING OPPORTUNITIES
+                    UALBANY FUNDING OPPORTUNITIES
                 </h2>
-                <div class = "display-flex row">
-                    
-                    <div class = "tile">
-                        <a href = "ualbany-awards.html">   
-                        <div class = "tile-logo-container">
-                        <img class = "tile-logo" src = "assets/logos/ualbany_funding_gold.png">                        
-                        <p>UALBANY FUNDING</p>
-                    </div>
-                    </a>
-                    </div>
-                    </a>
-                    
-                    <div class = "tile">
-                        <a href = "major-awards.html">
-                            <div class = "tile-logo-container">
-                                <img class = "tile-logo" src = "assets/logos/funding.png">                        
-                                <p>MAJOR AWARDS</p>
-                            </div>
-                        </a>
-                    </div>
-                    </a>
-                    
-                    <div class = "tile">
-                        <a href = "other-funding.html">
-                            <div class = "tile-logo-container">
-                                <img class = "tile-logo" src = "assets/logos/hat.png">                        
-                                <p>OTHER PRESTIGIOUS AWARDS</p>
-                            </div>
-                    </a>
-                    </div>
-                    
-                   
-                    <div class = "tile">
-                        <a href = "searchable-databases.html">
-                            <div class = "tile-logo-container">
-                                <img class = "tile-logo" src = "assets/logos/searchable_database_gold.png">                        
-                                <p>SEARCHABLE DATABASES</p>
-                            </div>
-                            </a>
-                    </div>
-                    
+                <input id = "search-box" placeholder = "Search for awards"><button id = "search-button" type = "submit"><i class="fa fa-search"></i></button>
+                <br><span id = "search-box-results"></span>
+                <div class="awards-container">
                 </div>
             </div>
         </div>
     </section>
     <footer id="footer">
     </footer>
-    
     <script src="libraries/jquery/jquery.min.js"></script>
     <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
     <script src="libraries/misc/drupal.js"></script>
     <script src="libraries/ualbany/albany.js"></script>
+    <script src="libraries/ualbany/search-button.js"></script>
     <script src="js/topheader.js"></script>
     <script src="js/footer.js"></script>
-    <script src="libraries/ualbany/search-button.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/external-funding.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/search-accordion-new.js"></script>
 </body>
 
 </html>
