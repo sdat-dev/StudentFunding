@@ -70,7 +70,12 @@
                     UALBANY FUNDING OPPORTUNITIES
                 </h2>
                 <input id = "search-box" placeholder = "Search for awards"><button id = "search-button" type = "submit"><i class="fa fa-search"></i></button>
-                <br><span id = "search-box-results"></span>
+                <br><span id = "search-box-results">
+                    <div class="preload" style="position:absolute; width:100%; height:100%; margin: 0 auto;">
+                        <p style="text-align:center;padding:20px" >Please wait while the content loads</p>
+                        <img style="margin: 0 auto; display: block;" src='assets/images/loader.gif'>
+                    </div>
+                </span>
                 <div class="awards-container">
                 </div>
             </div>
@@ -89,6 +94,16 @@
     <script src="js/external-funding.js"></script>
     <script src="js/accordion.js"></script>
     <script src="js/search-accordion-new.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $(function () {
+                clearsearch();
+                $(".preload").fadeOut(1000, function () {
+                    $("#fundingopps").fadeIn(800);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

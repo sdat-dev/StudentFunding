@@ -11,12 +11,6 @@ window.onload = function () {
 
 var parseData = function (p) {
     data = p;
-    // if (p.ErrorType != null) {
-    //     if ($('#waiter').is(':visible')) $('#waiter').hide();
-    //     alert(p.ErrorType + '\n' + p.ErrorMessage);
-    //     return;
-    // }
-    
     if(getAccordiationData(p))
         $('#waiter').hide();
 };
@@ -54,7 +48,11 @@ function getAccordiationData(funding_data) {
                 }
             }
         }
+
     }
+
+
+    
     for (var k = 0; k < distinctCategories.length; k++) {
         
         var length = 0;
@@ -81,8 +79,8 @@ function getAccordiationData(funding_data) {
         }
 
         let categoryHeader = distinctCategories[k] + ' (<span class="noofsolis">' + length + '</span> Opportunities)';
-        console.log("categoryHeader", categoryHeader);
-        let accordionContent = generateFederalAccordionContent(arr, img_url, distinctCategories[k]);
+        // console.log("categoryHeader", categoryHeader);
+        let accordionContent = generateFederalAccordionContent(arr); //, img_url, distinctCategories[k]);
         let collapseId = "collapse" + counter;
         let headerId = "heading" + counter;
         let childId = "child" + counter;
@@ -139,7 +137,7 @@ function join(t, a, s) {
     return a.map(format).join(s);
 }
 
-let generateFederalAccordionContent = function (arr, img_url, funding_name) {
+let generateFederalAccordionContent = function (arr){   //, img_url, funding_name) {
     let content = '';
     var today = new Date();
     var flag = false;
@@ -220,50 +218,50 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
             Estimated_Funding = formatter.format(arr[i].total_funding_limit);
         }
 
-        var image_name = getImageName(arr[i].spon_name).toLowerCase();
-        if (funding_name === 'Federal - Others') {
-            var url_image = "assets/logos-funding-opportunities/" + image_name + ".png";
-            var image = new Image(url_image);
+        // var image_name = getImageName(arr[i].spon_name).toLowerCase();
+        // if (funding_name === 'Federal - Others') {
+        //     var url_image = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
+        //     var image = new Image(url_image);
 
-            if (image_name === "cfgh" ||
-                image_name === "cdc") {
-                img_url = "assets/logos-funding-opportunities/cdc.png";
-            }
+        //     if (image_name === "cfgh" ||
+        //         image_name === "cdc") {
+        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/cdc.png";
+        //     }
 
-            else if (image_name === "dotaf" ||
-                image_name === "dota" ||
-                image_name === "dla" ||
-                image_name === "dova" ||
-                image_name === "dohs" ||
-                image_name === "dod"
-            ) {
-                img_url = "assets/logos-funding-opportunities/dod.png";
+        //     else if (image_name === "dotaf" ||
+        //         image_name === "dota" ||
+        //         image_name === "dla" ||
+        //         image_name === "dova" ||
+        //         image_name === "dohs" ||
+        //         image_name === "dod"
+        //     ) {
+        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/dod.png";
 
-            }
-            else if (image_name === "niofaadoa"
-                || image_name === "arsdoa"
-            ) {
-                img_url = "assets/logos-funding-opportunities/" + image_name + ".png";
-            }
-            else {
-                if (checkFileExists(url_image)) {
-                    img_url = url_image;
-                }
-                else {
-                    img_url = "assets/logos-funding-opportunities/SPIN_logo.png";
-                }
-            }
-        }
-        if (funding_name === 'Others') {
-            var url_image = "assets/logos-funding-opportunities/" + image_name + ".png";
-            var image = new Image(url_image);
-            if (checkFileExists(url_image)) {
-                img_url = url_image;
-            }
-            else {
-                img_url = "assets/logos-funding-opportunities/SPIN_logo.png";
-            }
-        }
+        //     }
+        //     else if (image_name === "niofaadoa"
+        //         || image_name === "arsdoa"
+        //     ) {
+        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
+        //     }
+        //     else {
+        //         if (checkFileExists(url_image)) {
+        //             img_url = url_image;
+        //         }
+        //         else {
+        //             img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
+        //         }
+        //     }
+        // }
+        // if (funding_name === 'Others') {
+        //     var url_image = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
+        //     var image = new Image(url_image);
+        //     if (checkFileExists(url_image)) {
+        //         img_url = url_image;
+        //     }
+        //     else {
+        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
+        //     }
+        // }
         var description = '';
         if(arr[i].synopsis != null){
             var description = arr[i].synopsis.replace(/<[^>]*>/g, '');
@@ -274,9 +272,18 @@ let generateFederalAccordionContent = function (arr, img_url, funding_name) {
                 dueDate = deadlineDate;
             }
         }
-        // let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
+
+        if (checkFileExists(arr[i].img_url)) {
+            img_url = url_image;
+        }
+        else {
+            img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
+        }
+
+        let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
         if(flag){
-            content = content + '<div class = "display-flex opportunity-container search-container">' + 
+            content += '<div class = "display-flex opportunity-container search-container">' + imageElement +
+                // '<div class = "display-flex opportunity-container search-container">' + 
                 '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin"><b>' + arr[i].prog_title + '</b></h4><br>' + '<div class = "opp-details display-flex">' +
     
                 '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
@@ -318,13 +325,15 @@ function getDueDate(arr) {
     return dueDate;
 }
 
-let getImageName = function (sponser_name) {
-    if (sponser_name.split(" ").length == 1) {
-        return sponser_name;
-    }
-    var matches = sponser_name.match(/\b(\w)/g);
-    return matches.join('');
-}
+// let getImageName = function (sponser_name) {
+//     // console.log(sponser_name);
+//     if (sponser_name.split(" ").length == 1) {
+//         return sponser_name;
+//     }
+//     var matches = sponser_name.match(/\b(\w)/g);
+//     // console.log(matches.join(''));
+//     return matches.join('');
+// }
 
 let counter = 1;
 let buildduedatenote = function (deadlinenote) {
@@ -361,4 +370,16 @@ let generateAccordionElem = function (level, collapseId, headerId, parentId, chi
                            '</div>'+
                         '</div>';
     return accordionElem;
+}
+
+let checkFileExists = function (url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', url, false);
+    xhr.send();
+
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
 }
