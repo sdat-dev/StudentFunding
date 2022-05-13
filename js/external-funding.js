@@ -274,7 +274,7 @@ let generateFederalAccordionContent = function (arr){   //, img_url, funding_nam
         }
 
         if (checkFileExists(arr[i].img_url)) {
-            img_url = url_image;
+            img_url = arr[i].img_url;
         }
         else {
             img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
