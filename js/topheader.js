@@ -20,8 +20,8 @@ let addTopHeader = function () {
                     '</div>'+
                     '<nav id="top-nav" aria-label="MyUAlbany and Give Links">'+
                         '<ul>'+
-                            '<li><a title="Link to Faculty and Staff Portal" href="https://www.albany.edu/myualbany">MYUALBANY</a></li>'+
-                            '<li><a title="Donate to the University" href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&amp;gid=2&amp;pgid=2040&amp;appealcode=uahome">GIVE</a></li>'+
+                            '<li><a title="Link to Faculty and Staff Portal" href="https://www.albany.edu/myualbany" style="font-size: initial;">MYUALBANY</a></li>'+
+                            '<li><a title="Donate to the University" href="https://www.alumni.albany.edu/s/1642/18-giving/landing.aspx?sid=1642&amp;gid=2&amp;pgid=2040&amp;appealcode=uahome" style="font-size: initial;">GIVE</a></li>'+
                         '</ul>'+
                     '</nav>'+
                     '<nav id="main-nav" aria-label="Main Navigation Menu">'+
