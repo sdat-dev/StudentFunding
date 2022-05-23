@@ -8,7 +8,6 @@ window.onload = function () {
         clearsearch();
     })
 }
-
 var parseData = function (p) {
     data = p;
     if(getAccordiationData(p))
@@ -63,24 +62,21 @@ function getAccordiationData(funding_data) {
         if (distinctCategories[k] == 'Undergraduate') {
             length = setNoOfSoils(Undergraduate_arr);
             arr = Undergraduate_arr;
-            img_url = "assets/images/hat.png";
         }
 
         if (distinctCategories[k] == 'Graduate') {
             length = setNoOfSoils(Graduate_arr)
             arr = Graduate_arr;
-            img_url = "assets/images/diploma.png";
         }
 
         if (distinctCategories[k] == 'Doctoral or Terminal Degree') {
             length = setNoOfSoils(Doctoral_arr);
             arr = Doctoral_arr;
-            img_url = "assets/images/hat-diploma.png";
         }
 
         let categoryHeader = distinctCategories[k] + ' (<span class="noofsolis">' + length + '</span> Opportunities)';
         // console.log("categoryHeader", categoryHeader);
-        let accordionContent = generateFederalAccordionContent(arr); //, img_url, distinctCategories[k]);
+        let accordionContent = generateFederalAccordionContent(arr); 
         let collapseId = "collapse" + counter;
         let headerId = "heading" + counter;
         let childId = "child" + counter;
@@ -137,7 +133,7 @@ function join(t, a, s) {
     return a.map(format).join(s);
 }
 
-let generateFederalAccordionContent = function (arr){   //, img_url, funding_name) {
+let generateFederalAccordionContent = function (arr){ 
     let content = '';
     var today = new Date();
     var flag = false;
@@ -218,50 +214,6 @@ let generateFederalAccordionContent = function (arr){   //, img_url, funding_nam
             Estimated_Funding = formatter.format(arr[i].total_funding_limit);
         }
 
-        // var image_name = getImageName(arr[i].spon_name).toLowerCase();
-        // if (funding_name === 'Federal - Others') {
-        //     var url_image = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
-        //     var image = new Image(url_image);
-
-        //     if (image_name === "cfgh" ||
-        //         image_name === "cdc") {
-        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/cdc.png";
-        //     }
-
-        //     else if (image_name === "dotaf" ||
-        //         image_name === "dota" ||
-        //         image_name === "dla" ||
-        //         image_name === "dova" ||
-        //         image_name === "dohs" ||
-        //         image_name === "dod"
-        //     ) {
-        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/dod.png";
-
-        //     }
-        //     else if (image_name === "niofaadoa"
-        //         || image_name === "arsdoa"
-        //     ) {
-        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
-        //     }
-        //     else {
-        //         if (checkFileExists(url_image)) {
-        //             img_url = url_image;
-        //         }
-        //         else {
-        //             img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
-        //         }
-        //     }
-        // }
-        // if (funding_name === 'Others') {
-        //     var url_image = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/" + image_name + ".png";
-        //     var image = new Image(url_image);
-        //     if (checkFileExists(url_image)) {
-        //         img_url = url_image;
-        //     }
-        //     else {
-        //         img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
-        //     }
-        // }
         var description = '';
         if(arr[i].synopsis != null){
             var description = arr[i].synopsis.replace(/<[^>]*>/g, '');
@@ -324,16 +276,6 @@ function getDueDate(arr) {
     return dueDate;
 }
 
-// let getImageName = function (sponser_name) {
-//     // console.log(sponser_name);
-//     if (sponser_name.split(" ").length == 1) {
-//         return sponser_name;
-//     }
-//     var matches = sponser_name.match(/\b(\w)/g);
-//     // console.log(matches.join(''));
-//     return matches.join('');
-// }
-
 let counter = 1;
 let buildduedatenote = function (deadlinenote) {
     let content = "";
@@ -347,7 +289,6 @@ let buildduedatenote = function (deadlinenote) {
         '</div>' +
         '</div>';
     counter++;
-    // console.log(counter + " " + deadlinenote);
     return content;
 }
 
