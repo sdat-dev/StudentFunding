@@ -6,7 +6,7 @@ let addTopHeader = function () {
     sidemenu.classList.add("container-fluid");
     let content = "";
     content += 
-    '<div class="container-fluid">'+
+    '<div class="container-fluid" style="display:block;">'+
     '<div class="navbar-header">'+
         '<div class="region region-navigation"><a href="#" class="menu-burger" title="Toggle Mobile Menu Navigation"><span class="fa fa-bars" role="img" aria-label="mobile menu icon" aria-hidden="true"></span><span class="sr-only">Toggle Mobile Menu Navigation</span></a>'+
             '<section>'+

@@ -280,11 +280,10 @@ let generateFederalAccordionContent = function (arr){   //, img_url, funding_nam
             img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
         }
 
-        let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" /></div>';
         if(flag){
+            let imageElement = (arr[i].logo == '') ? '' : '<div class = "col-xl-2 col-lg-3"><img class = "agency-logo" src = "' + img_url + '" style="max-width: -webkit-fill-available;" /></div>';
             content += '<div class = "display-flex opportunity-container search-container">' + imageElement +
-                // '<div class = "display-flex opportunity-container search-container">' + 
-                '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin"><b>' + arr[i].prog_title + '</b></h4><br>' + '<div class = "opp-details display-flex">' +
+                '<div class = "col-xl-10 col-lg-9">' + '<h4 class = "opp-header black-content-header-no-margin"><b style="font-size: 2.4rem; line-height: 2.9rem;">' + arr[i].prog_title + '</b></h4><br>' + '<div class = "opp-details display-flex">' +
     
                 '<div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
                 '<i class="fas fa-flag"></i> <strong>Agency Name: </strong>' + arr[i].spon_name +
@@ -294,7 +293,7 @@ let generateFederalAccordionContent = function (arr){   //, img_url, funding_nam
                 '</div><div class = "col-sm-12 col-md-12 col-lg-12 col-xl-6">' +
                 '<i class="fas fa-calendar-day"></i> <strong>Date: </strong>' + dueDate +
                 '<br></div></div></div>' +
-                '<br><p class = "opp-description">' + description + '</p>';
+                '<br><br><br><br><br><br><br><br><br><p class = "opp-description">' + description + '</p>';
             if (arr[i].deadline_note != null && arr[i].deadline_note != "") {
                 content += buildduedatenote(arr[i].deadline_note);
             }
