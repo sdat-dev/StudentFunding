@@ -229,7 +229,7 @@ let generateFederalAccordionContent = function (arr){
             img_url = arr[i].img_url;
         }
         else {
-            img_url = "https://sdat-dev.github.io/resources/healthequity/assets/logos-funding-opportunities/SPIN_logo.png";
+            img_url = "https://sdat-dev.github.io/resources/studentfunding/assets/logos-funding-opportunities/SPIN_logo.png";
         }
 
         if(flag){
